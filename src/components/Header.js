@@ -18,7 +18,7 @@ const handleCryptocurrencies = ()=>{
 const handleSearchButton = async()=>{
   const data =await fetch(`https://api.coingecko.com/api/v3/coins/${searchQuery}`, options)
   const jsonData =await data.json();
-  // console.log(jsonData)
+  console.log(jsonData)
   dispatch(addSearch(jsonData))
   nevigate("/coin")
   

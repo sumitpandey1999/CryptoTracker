@@ -6,6 +6,7 @@ import Cryptocurrencies from './components/Cryptocurrencies';
 import { Provider } from 'react-redux';
 import appstore from './utils/store';
 import Coin from './components/Coin';
+import CoinDetails from './components/CoinDetails';
 
 function App() {
 
@@ -22,6 +23,10 @@ function App() {
     {
       path:"/coin",
       element:<Coin/>
+    },
+    {
+      path:"/coinDetail/:id",
+      element:<CoinDetails/>
     }
 
 

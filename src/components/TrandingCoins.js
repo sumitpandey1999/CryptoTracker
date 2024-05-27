@@ -10,7 +10,7 @@ const TrandingCoins = () => {
         const data = await fetch('https://api.coingecko.com/api/v3/search/trending?x_cg_demo_api_key=CG-WsHKrWvbdsc1D5Lh4xuUFaQY', options)
         const jsonData = await data.json();
         setTrandingCoinsDataState(jsonData.coins)
-        console.log(jsonData.coins)
+        // console.log(jsonData.coins)
     }
 
     useEffect(() => {

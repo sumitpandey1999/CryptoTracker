@@ -10,13 +10,14 @@ const Header = () => {
   const dispatch = useDispatch()
 
   const [searchQuery, setSerachQuery] = useState("")
+  const lowercaseSearchQuery = searchQuery.toLowerCase();
 
 const handleCryptocurrencies = ()=>{
   nevigate("/cryptocurrencies")
 }
 
 const handleSearchButton = async()=>{
-  const data =await fetch(`https://api.coingecko.com/api/v3/coins/${searchQuery}`, options)
+  const data =await fetch(`https://api.coingecko.com/api/v3/coins/${lowercaseSearchQuery}`, options)
   const jsonData =await data.json();
   console.log(jsonData)
   dispatch(addSearch(jsonData))
